@@ -99,12 +99,12 @@ layout: image-right
 image: https://imagenes.elpais.com/resizer/Dd_m0ujUDvbO3BAEQpcGVNwRcZI=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/CYLY3NVHQKJ6QNFCHIVCHJ5B6I.jpg
 ---
 
-# ¿Por qué mockerar?
+# ¿Por qué mockear?
 
-- No disponer de una api que nos sirva datos.
-- Es acceso a la api no está disponible en desarrollo
-- Problemas de red que nos imposibilita el acceso a la api
-- Test lentos por culpa comunicación con la api
+- No disponer de un api que nos sirva datos.
+- Es acceso al api no está disponible en desarrollo
+- Problemas de red que nos imposibilita el acceso al api
+- Test lentos por culpa comunicación con el api
 
 ---
 layout: center
@@ -130,7 +130,7 @@ class: text-center
 
 ## Funcionalidades
 
-Filtrar, paginar, ordernar, buscar, middlewares, ...
+Filtrar, paginar, ordenar, buscar, middlewares, ...
 
 ## Instalación
 
@@ -213,3 +213,62 @@ class: text-center
 ---
 
 ## Veamos ejemplo de uso
+
+
+---
+layout: cover
+class: text-center
+background: https://www.capgemini.com/mx-es/wp-content/uploads/sites/24/2019/02/Testing-3.jpg
+---
+
+# Testing
+
+---
+class: text-center
+---
+
+# Testing library & Vitest
+
+  <div grid="~ cols-2 gap-2  content-center" m="-t-2">  
+
+  Vitest test runner de Vite 
+
+  Testing-library suite de paquetes para el testing UI centrado en el usuario
+
+  <img border="rounded" class="h-48" src="https://cdn.image.st-hatena.com/image/square/6f9f59142a2bc1567ef5b041b4a18235b42710ac/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fvitest.dev%2Fog.png">
+
+  <img border="rounded" class="h-48" src="https://frontend-stuff.com/static/7c857cadee053c761fa7e2ca3ccae895/807a7/testing.jpg">
+
+  </div>
+
+---
+layout: image-right
+image: https://seeklogo.com/images/V/vitest-logo-9ADDA575A5-seeklogo.com.png
+---
+
+# Vitest
+
+- Misma configuración para test, dev y producción
+- Multiplataforma Vue, React, Svelte, ...
+- Jest, Chai, happy-dom
+- Tests concurrentes
+- Multihilo
+- Muy rápido
+
+---
+layout: image-right
+image: https://d33wubrfki0l68.cloudfront.net/d8252a1a8dedc92cdb69ee5c022cd91c67e3af4e/51dd8/img/tech/rtl.svg
+---
+
+# Testing-library
+
+El foco en esta librería está puesto en el usuario, y por ello los tests están enfocados a como un usuario percibe la aplicación
+
+Esto nos permite no estar acoplados a detalles de implementación que en futuros refactores nos harían que se rompiesen nuestros test
+
+Debemos evitar:
+
+- Estado interno de un componente
+- Métodos internos de un componente
+- Métodos de ciclo de vida de un componente
+- Componentes secundarios
