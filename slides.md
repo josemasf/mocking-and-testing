@@ -296,6 +296,9 @@ Uno de los puntos a favor de pruebas automatizadas es que podemos ejecutarlas si
 
 Todo esto podría pasar mientras nosotros estamos realizando otra tarea, sin preocuparos de dicha ejecución.
 
+<div class="grid place-content-center">
+  <img src="/assets/imgs/test-pr.png" />
+</div>
 
 ---
 
@@ -343,6 +346,9 @@ image: /assets/imgs/vitest-logo.png
 - Multihilo
 - Muy rápido
 
+> Entorno UI muy potente
+
+
 ---
 layout: image-right
 image: /assets/imgs/testing-lib.svg
@@ -354,7 +360,6 @@ El foco en esta librería está puesto en el usuario, y por ello los tests está
 
 Esto nos permite no estar acoplados a detalles de implementación que en futuros refactores nos harían que se rompiesen nuestros test
 
-> Entorno UI muy potente
 
 Debemos evitar:
 
@@ -362,6 +367,7 @@ Debemos evitar:
 - Métodos internos de un componente
 - Métodos de ciclo de vida de un componente
 - Componentes secundarios
+
 
 ---
 layout: center
