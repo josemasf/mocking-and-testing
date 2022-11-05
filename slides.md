@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://lh3.googleusercontent.com/j7kP11pwz9CRMZ7G_91Bsp8D9uZitIBxytJTcpXL3ecJ2QeEg4-2m_kB28rKF0ISlK-3PfuYNxKjkige-VIJobFuO4PXyertOQb4NeQJRzKfnQG--dpBtolW9C21kQlY9cilOuYpNR4VpPrKmXWch-mHfphjPjCQTYImXV4gvGvwJ3my5eVFRI9A5hvYbMlK0Wj0ak5h9ejoWS0bx8Z3gY7X2_HBtIlK4bwQFThQDPZvhEaFePClwBkgEodx4nI29DKmXyI_rTYez8LqDsU6dU-E9w7E5mfL-X98XOFzZ-yj0Q_a0JIOI-Imz_Gu7lQAY2huBm5sfAylOC9C2zr6Bx6K2_q2qqyw3UxzeHcBpbJem5RCf7mQaRJ5ivDdmKL9O3HnqHLu_4mARBlYm_2t3VgR2Zmdyp3fRnbW4FhW9BbO3quNmT_49fGxLfQ4WvSFdOPfbkj3ZfZIQVh1V-2zGqUlnZyJXnGXyWaTe7ZwyvbXHt_CdHgJhXWeZfGqwLgdeTgE1W57N1el6cTBXJSdS1OohMu6mFvG0azDbj_F6CJY23qHpm5HimYWAFxt8s1PotKaZAR_JsRnFUBQMIyw90NFGEa0p720oPCTmxwaX2sKxiLGHneDZFqStEdqXTeP1KcuwACfTZZRqANozyPeZyE5Z3b6U-WiMJlhdCsX6pdQmTqYZDCISA28eEDFZw6hydXFiuTxUxGfRPVBSzVL930nhyebvFIqs3J1ujl0iil0Y_aKJ3NkA6vEjb88rjp1xFXVNYNfh38h49iV24jCp8nQnA14ovUjOVMhMw6VJHGHLW3Zy4nEiFzvR73sEEKVU1nkhADsne4uIh1XdKU7zLvfOs7XvulHisoQGhwV9m5Jc4nn0R7l5P9iY8dgZge9yEHQR3PNp-QuLYCBOHgPvlzcB6l2cMvbyOsXbDg223aaafvt4TFKX_Xk0No_bh6CmpFmWtOLuvnxIqFQDB0y=w1406-h937-no?authuser=0
+background: /assets/imgs/bg-title.jpg
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -96,7 +96,7 @@ h1 {
 
 ---
 layout: image-right
-image: https://imagenes.elpais.com/resizer/Dd_m0ujUDvbO3BAEQpcGVNwRcZI=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/CYLY3NVHQKJ6QNFCHIVCHJ5B6I.jpg
+image: /assets/imgs/tarantino.webp
 ---
 
 # ¿Por qué mockear?
@@ -120,23 +120,31 @@ class: text-center
 
 # JSON Server
 
-## Verbos permitidos
+<div grid="~ cols-2 gap-4">
+<div>      
 
-- GET
-- POST
-- PUT
-- PATCH
-- DELETE
+  ## Verbos permitidos
 
-## Funcionalidades
+  - GET
+  - POST
+  - PUT
+  - PATCH
+  - DELETE
+   
+</div>
+<div>
 
-Filtrar, paginar, ordenar, buscar, middlewares, ...
+  ## Funcionalidades
 
-## Instalación
+  Filtrar, paginar, ordenar, buscar, middlewares, ...
 
-```js
-npm install json-server
-```
+  ## Instalación
+
+  ```js
+  npm install json-server
+  ```   
+</div>
+</div>
 
 
 ---
@@ -180,8 +188,16 @@ npm install json-server
 ```
 
 <div>
-  <img src="https://sigdeletras.com/images/blog/202011_fakeapi/json-server.png">
+  <img src="/assets/imgs/json-server.png">
 </div>
+
+<!--
+npm init --y
+
+npm install json-server
+
+json-server --watch db.json --port 3000
+-->
 
 ---
 
@@ -204,8 +220,9 @@ npm install json-server
 ```
 
 <div>
-  <img src="https://sigdeletras.com/images/blog/202011_fakeapi/rutas.png">
+  <img src="/assets/imgs/rutas.png">
 </div>
+
 
 ---
 layout: center
@@ -218,10 +235,79 @@ class: text-center
 ---
 layout: cover
 class: text-center
-background: https://www.capgemini.com/mx-es/wp-content/uploads/sites/24/2019/02/Testing-3.jpg
+background: /assets/imgs/testing-bg.webp
 ---
 
 # Testing
+
+---
+layout: image-right
+image: /assets/imgs/first-principies.jpg
+---
+
+# Principios FIRST testing unitario
+
+- Fast (rápido)
+- Independent (independiente)
+- Repeatable (repetible)
+- Self-validating (auto evaluable)
+- Timely (oportuno)
+
+---
+
+# Fast (rápido)
+
+Una de las ventajas que nos ofrecen los test unitarios es la posibilidad de ejecutar un gran número de tests en cuestión de segundos. Todas las pruebas de nuestro proyecto, o al menos las relacionadas con el código, que estemos desarrollando deberían poder ejecutarse en un abrir y cerrar de ojos.
+
+Esto nos posibilita ejecutar los tests muy frecuentemente y con ello detectar bugs de forma muy rápida y sencilla.
+
+Por ejemplo, podríamos ejecutar todos los tests cada vez que hagamos un push a una rama sin preocuparnos del tiempo de ejecución de este proceso.
+
+---
+
+# Independent (independiente)
+
+Por muchas pruebas unitarias que tengamos, todas deben de ser independientes de las otras.
+
+En el momento que un test falla por el orden en el que se ha ejecutado, tenemos claro que ese test está mal desarrollado. El resultado no debe verse alterado ejecutando los tests en un orden y otro o incluso de forma independiente.
+
+> En vitest podemos indicar  un flag para lanzar de forma random la suite de test
+
+
+```ts
+  vitest --sequence.shuffle
+```
+
+
+---
+
+# Repeatable (repetible)
+
+> En mi local funciona
+
+El resultado de las pruebas debe ser el mismo independientemente del servidor en el que se ejecute. Las pruebas no deben tener dependencias de servidor, configuración de usuario, hora de ejecución…
+
+
+---
+
+# Self-validating (auto evaluable)
+
+Uno de los puntos a favor de pruebas automatizadas es que podemos ejecutarlas simplemente al pulsar un botón o incluso hacer que se ejecuten de forma automática tras otro proceso, como podría ser un push a una rama.
+
+Todo esto podría pasar mientras nosotros estamos realizando otra tarea, sin preocuparos de dicha ejecución.
+
+
+---
+
+# Timely (oportuno)
+
+Esta última característica se basa en cuándo deberíamos tener desarrolladas las pruebas, que deben estar desarrolladas lo antes posible y siempre antes de subir código a producción.
+
+Debemos evitar dejarlas para el final por dos simples motivos:
+
+- No podremos realizar pruebas de regresión durante la fase de desarrollo.
+- Una vez tenemos el código funcionando se suelen buscar excusas para dedicar el tiempo a otras tareas y no a escribir tests.
+
 
 ---
 class: text-center
@@ -234,16 +320,18 @@ class: text-center
   Vitest test runner de Vite 
 
   Testing-library suite de paquetes para el testing UI centrado en el usuario
-
-  <img border="rounded" class="h-48" src="https://cdn.image.st-hatena.com/image/square/6f9f59142a2bc1567ef5b041b4a18235b42710ac/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fvitest.dev%2Fog.png">
-
-  <img border="rounded" class="h-48" src="https://frontend-stuff.com/static/7c857cadee053c761fa7e2ca3ccae895/807a7/testing.jpg">
-
+  <div class="grid place-content-center">
+  	<img border="rounded" class="h-48" src="/assets/imgs/vitests.png">
   </div>
+  <div class="grid place-content-center">
+  	<img border="rounded" class="h-48" src="/assets/imgs/testing-lib.jpg">
+  </div>
+  </div>
+
 
 ---
 layout: image-right
-image: https://seeklogo.com/images/V/vitest-logo-9ADDA575A5-seeklogo.com.png
+image: /assets/imgs/vitest-logo.png
 ---
 
 # Vitest
@@ -257,7 +345,7 @@ image: https://seeklogo.com/images/V/vitest-logo-9ADDA575A5-seeklogo.com.png
 
 ---
 layout: image-right
-image: https://d33wubrfki0l68.cloudfront.net/d8252a1a8dedc92cdb69ee5c022cd91c67e3af4e/51dd8/img/tech/rtl.svg
+image: /assets/imgs/testing-lib.svg
 ---
 
 # Testing-library
@@ -266,9 +354,35 @@ El foco en esta librería está puesto en el usuario, y por ello los tests está
 
 Esto nos permite no estar acoplados a detalles de implementación que en futuros refactores nos harían que se rompiesen nuestros test
 
+> Entorno UI muy potente
+
 Debemos evitar:
 
 - Estado interno de un componente
 - Métodos internos de un componente
 - Métodos de ciclo de vida de un componente
 - Componentes secundarios
+
+---
+layout: center
+class: text-center
+---
+
+## Veamos ejemplo de uso
+
+---
+layout: image-right
+image: /assets/imgs/msw.jpg
+---
+
+# Mock Service Worker
+
+Mock Service Worker es una biblioteca de simulación de API para el navegador y Node.js que utiliza un Service Worker para interceptar las solicitudes que realmente sucedieron.
+
+Esto significa que no hay solicitudes de resguardos de clientes y una resiliencia inigualable cuando se trata de solicitar integridad, ya que su aplicación ahora realiza solicitudes de la misma manera que lo hace en producción.
+
+---
+
+<div>
+	<img src="/assets/imgs/msw-flow.png" class="h-full bg-white" />
+</div>
