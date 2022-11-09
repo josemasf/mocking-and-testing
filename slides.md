@@ -25,7 +25,7 @@ css: unocss
 
 # Mocking and testing
 
-Creación de entornos para desarrollo sin dependecias externas
+Creación de entornos para desarrollo y testing sin dependecias externas
 
 ---
 
@@ -263,6 +263,11 @@ Esto nos posibilita ejecutar los tests muy frecuentemente y con ello detectar bu
 
 Por ejemplo, podríamos ejecutar todos los tests cada vez que hagamos un push a una rama sin preocuparnos del tiempo de ejecución de este proceso.
 
+<!--
+- Test runner rápido
+- No tener dependencias que bloqueen
+-->
+
 ---
 
 # Independent (independiente)
@@ -311,6 +316,9 @@ Debemos evitar dejarlas para el final por dos simples motivos:
 - No podremos realizar pruebas de regresión durante la fase de desarrollo.
 - Una vez tenemos el código funcionando se suelen buscar excusas para dedicar el tiempo a otras tareas y no a escribir tests.
 
+<!--
+No romper cosas antiguas desarrolladas
+-->
 
 ---
 class: text-center
@@ -392,3 +400,115 @@ Esto significa que no hay solicitudes de resguardos de clientes y una resilienci
 <div>
 	<img src="/assets/imgs/msw-flow.png" class="h-full bg-white" />
 </div>
+
+---
+
+# Mocks
+
+1. Directorio de mocks
+
+```
+src/mocks
+```
+
+2. Handlers
+
+```
+src/mocks/handlers.js
+```
+
+---
+
+# Handlers
+
+Contenido
+
+``` ts
+const handlers = [
+  rest.get('https://ipay.stage.iberostar.com/api/MasterData/Hotels', (req, res, context) => {
+    return res(context.status(200), context.json(mockServer.Hotels))
+  }),
+  rest.get('https://ipay.stage.iberostar.com/api/MasterData/Hotels/:id', (req, res, context) => {
+    const { id } = req.params
+    return res(context.status(200), context.json(mockServer.Hotels[id - 1]))
+  }),  
+  rest.get(
+    'https://ipay.stage.iberostar.com/api/Ingenico/HotelConfiguration?hotelId=:idHotel&accountId=:idAccount',
+    (req, res, context) => {
+      const { idHotel } = req.params
+      if (idHotel === 2) return res(context.status(404), context.text('No configurations and default merchant found'))
+      else return res(context.status(200), context.json(mockServer.Summary))
+    }
+  ),  
+  rest.put('https://ipay.stage.iberostar.com/api/Ingenico/HotelConfiguration', (req, res, context) => {
+    return res(context.status(200), context.json(req.bodyUsed))
+  }),
+  rest.post('https://ipay.stage.iberostar.com/api/Ingenico/HotelConfiguration', (req, res, context) => {
+    return res(context.status(200), context.json(req.bodyUsed))
+  }),
+]
+
+```
+
+---
+
+# Utilidad para test y para dev
+
+> npm install msw --save-dev
+
+<div grid="~ cols-2 gap-4">
+ <div>      
+
+  ## Test
+
+  ``` ts
+  ///AreaHotels.test.ts
+  
+  import { handlers, rest } from '@/mocks/handlers'
+  import { setupServer } from 'msw/node'
+
+  const server = setupServer(...handlers)
+  ```  
+
+  ``` ts
+  it('should render empty pos-table with no data', async ()  {
+    server.use(
+      rest.get(`${process.env.VITE_API_ENDPOINT}/MasterData/Hotels`, (_req, res, context) => {
+        return res(context.status(404), context.json([]))
+      })
+    )
+     await waitFor(() = {
+      expect(getByText(/Data no available/i)).toBeInTheDocument()
+    })
+  })
+
+  ```  
+   
+ </div>
+ <div>
+  
+  ## Dev
+
+  ```    
+    npx msw init public/ --save 
+  ```
+
+  ```ts
+  ///main.ts
+
+  if (env.MODE === 'development') {
+    const worker = setupWorker(...handlers)
+    worker.start()
+  }
+  ```
+
+ </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+## Veamos ejemplo de uso
+
