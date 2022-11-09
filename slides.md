@@ -512,3 +512,82 @@ class: text-center
 
 ## Veamos ejemplo de uso
 
+---
+layout: cover
+class: text-center
+background: /assets/imgs/mother-object.webp
+---
+
+# Patrón Mother Object
+
+---
+
+# Definición
+
+> An object mother is a kind of class used in testing to help create example objects that you use for testing.
+>
+> -- <cite>Martin Fowler</cite> [24 Octubre 2006](https://martinfowler.com/bliki/ObjectMother.html) 
+
+## Herramientas
+  <div grid="~ cols-2 gap-2  content-center" m="-t-2">  
+
+  [Faker-js](https://www.npmjs.com/package/@faker-js/faker?activeTab=readme)
+
+  [Faker](https://www.npmjs.com/package/faker/v/2.1.3)
+  <div class="grid place-content-center">
+  	<img border="rounded" class="h-48" src="assets/imgs/faker-js.svg" alt="faker-js" />
+  </div>
+  <div class="grid place-content-center">
+  	<img border="rounded" class="h-48" src="assets/imgs/faker.png" alt="faker">
+  </div>
+  </div>
+
+---
+
+# Implementación
+
+<div grid="~ cols-2 gap-4">
+ <div>   
+
+```ts
+//src/mocks/MotherObject.ts
+import { Account } from '@/types'
+import { faker } from '@faker-js/faker/locale/en'
+
+export const ACCOUNTS: Account[] = []
+
+export function createRandomAccount(): Account {
+  return {
+    id: faker.datatype.uuid(),
+    name: faker.company.name(),
+    credential: faker.internet.password(),
+    key: faker.random.word(),
+  }
+}
+
+Array.from({ length: 10 }).forEach(() => {
+  ACCOUNTS.push(createRandomAccount())
+})
+
+```
+   
+ </div>
+ <div>
+
+```ts
+//handlers
+rest.get('/api/MasterData/accounts', (req, res, context) => {
+    return res(context.status(200), context.json(ACCOUNTS))
+  }),
+
+```
+ </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+## Veamos ejemplo de uso
+
