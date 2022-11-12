@@ -254,7 +254,9 @@ image: /imgs/first-principies.jpg
 - Timely (oportuno)
 
 ---
-
+layout: image-right
+image: /imgs/flash.jpg
+---
 # Fast (rápido)
 
 Una de las ventajas que nos ofrecen los test unitarios es la posibilidad de ejecutar un gran número de tests en cuestión de segundos. Todas las pruebas de nuestro proyecto, o al menos las relacionadas con el código, que estemos desarrollando deberían poder ejecutarse en un abrir y cerrar de ojos.
@@ -269,6 +271,9 @@ Por ejemplo, podríamos ejecutar todos los tests cada vez que hagamos un push a 
 -->
 
 ---
+layout: image-right
+image: /imgs/independiente.jpg
+---
 
 # Independent (independiente)
 
@@ -282,8 +287,9 @@ En el momento que un test falla por el orden en el que se ha ejecutado, tenemos 
 ```ts
   vitest --sequence.shuffle
 ```
-
-
+---
+layout: image-right
+image: /imgs/repetible.jpg
 ---
 
 # Repeatable (repetible)
@@ -305,6 +311,9 @@ Todo esto podría pasar mientras nosotros estamos realizando otra tarea, sin pre
   <img src="/imgs/test-pr.png" />
 </div>
 
+---
+layout: image-right
+image: /imgs/oportunos.jpg
 ---
 
 # Timely (oportuno)
@@ -527,7 +536,7 @@ background: /imgs/mother-object.webp
 > An object mother is a kind of class used in testing to help create example objects that you use for testing.
 >
 > -- <cite>Martin Fowler</cite> [24 Octubre 2006](https://martinfowler.com/bliki/ObjectMother.html) 
-src="/
+
 ## Herramientas
   <div grid="~ cols-2 gap-2  content-center" m="-t-2">  
 
@@ -583,11 +592,4 @@ rest.get('/api/MasterData/accounts', (req, res, context) => {
 ```
  </div>
 </div>
-
----
-layout: center
-class: text-center
----
-
-## Veamos ejemplo de uso
 
