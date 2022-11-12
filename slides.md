@@ -50,7 +50,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="assets/logos/logo-vista.png"
+        src="/assets/logos/logo-vista.png"
         class="rounded-full w-32 mb-4 mx-auto"
         alt="Avatar"
       />
@@ -61,7 +61,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="assets/logos/logo-ofg.png"
+        src="/assets/logos/logo-ofg.png"
         class="rounded-full w-32 mb-4 mx-auto bg-white"
         alt="Avatar"
       />
@@ -72,7 +72,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="assets/logos/logo-inno.png"
+        src="/assets/logos/logo-inno.png"
         class="rounded-full w-16 mb-4 mx-auto"
         alt="Avatar"
       />
@@ -527,7 +527,7 @@ background: /assets/imgs/mother-object.webp
 > An object mother is a kind of class used in testing to help create example objects that you use for testing.
 >
 > -- <cite>Martin Fowler</cite> [24 Octubre 2006](https://martinfowler.com/bliki/ObjectMother.html) 
-
+src="/assets/
 ## Herramientas
   <div grid="~ cols-2 gap-2  content-center" m="-t-2">  
 
@@ -535,10 +535,10 @@ background: /assets/imgs/mother-object.webp
 
   [Faker](https://www.npmjs.com/package/faker/v/2.1.3)
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="assets/imgs/faker-js.svg" alt="faker-js" />
+  	<img border="rounded" class="h-48" src="/assets/imgs/faker-js.svg" alt="faker-js" />
   </div>
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="assets/imgs/faker.png" alt="faker">
+  	<img border="rounded" class="h-48" src="/assets/imgs/faker.png" alt="faker">
   </div>
   </div>
 
