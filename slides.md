@@ -21,11 +21,18 @@ drawings:
   persist: false
 # use UnoCSS
 css: unocss
+favicon: 'https://josemariasantos.com/favicon.svg'
+fonts:
+  sans: 'Montserrat'
+  serif: 'Slabo'
+  mono: 'Fira Code'
 ---
 
 # Mocking and testing
 
+<div class="text-slate-200">
 Creación de entornos para desarrollo y testing sin dependecias externas
+</div>
 
 ---
 
@@ -47,37 +54,43 @@ Creación de entornos para desarrollo y testing sin dependecias externas
 
 
 <div class="grid grid-cols-3 gap-4 mt-2 ">
-  <div >
-    <div class="text-center">
-      <img
-        src="/logos/logo-vista.png"
-        class="rounded-full w-32 mb-4 mx-auto"
-        alt="Avatar"
-      />
-      <h5 class="text-xl font-medium leading-tight mb-2">Vistalegre Solutions</h5>
-      <p class="text-gray-500">10 años</p>
+  <div>
+    <div class="bg-slate-700">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg border-white">
+        <img class="w-full" src="/logos/logo-vista.png" alt="Vistalegre">
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-xl mb-2">Vistalegre Solutions</div>    
+        </div>
+        <div class="px-6 pt-4 text-center">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">2007 - 2017</span>    
+        </div>
+      </div>
     </div>
   </div>
-  <div >
-    <div class="text-center">
-      <img
-        src="/logos/logo-ofg.png"
-        class="rounded-full w-32 mb-4 mx-auto bg-white"
-        alt="Avatar"
-      />
-      <h5 class="text-xl font-medium leading-tight mb-2">OFG</h5>
-      <p class="text-gray-500">1 años</p>
+  <div>
+    <div class="bg-slate-700">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg border-white">
+        <img class="w-full" src="/logos/logo-ofg.png" alt="OFG">
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-xl mb-2">OFG</div>    
+        </div>
+        <div class="px-6 pt-4 text-center">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">2017 - 2018</span>    
+        </div>
+      </div>
     </div>
   </div>
-  <div >
-    <div class="text-center">
-      <img
-        src="/logos/logo-inno.png"
-        class="rounded-full w-16 mb-4 mx-auto"
-        alt="Avatar"
-      />
-      <h5 class="text-xl font-medium leading-tight mb-2">Innovations Strategies</h5>
-      <p class="text-gray-500">4 años</p>
+  <div>
+    <div class="bg-slate-700">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg border-white">
+        <img class="w-full " src="/logos/logo-inno.png" alt="OFG">
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-xl mb-2">Innovation strategies</div>    
+        </div>
+        <div class="px-6 pt-4 text-center">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">2018 - ?</span>    
+        </div>
+      </div>
     </div>
   </div>
 </div>
