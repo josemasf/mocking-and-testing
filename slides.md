@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: /assets/imgs/bg-title.jpg
+background: /imgs/bg-title.jpg
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -50,7 +50,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="/assets/logos/logo-vista.png"
+        src="/logos/logo-vista.png"
         class="rounded-full w-32 mb-4 mx-auto"
         alt="Avatar"
       />
@@ -61,7 +61,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="/assets/logos/logo-ofg.png"
+        src="/logos/logo-ofg.png"
         class="rounded-full w-32 mb-4 mx-auto bg-white"
         alt="Avatar"
       />
@@ -72,7 +72,7 @@ Creación de entornos para desarrollo y testing sin dependecias externas
   <div >
     <div class="text-center">
       <img
-        src="/assets/logos/logo-inno.png"
+        src="/logos/logo-inno.png"
         class="rounded-full w-16 mb-4 mx-auto"
         alt="Avatar"
       />
@@ -96,7 +96,7 @@ h1 {
 
 ---
 layout: image-right
-image: /assets/imgs/tarantino.webp
+image: /imgs/tarantino.webp
 ---
 
 # ¿Por qué mockear?
@@ -188,7 +188,7 @@ class: text-center
 ```
 
 <div>
-  <img src="/assets/imgs/json-server.png">
+  <img src="/imgs/json-server.png">
 </div>
 
 <!--
@@ -220,7 +220,7 @@ json-server --watch db.json --port 3000
 ```
 
 <div>
-  <img src="/assets/imgs/rutas.png">
+  <img src="/imgs/rutas.png">
 </div>
 
 
@@ -235,14 +235,14 @@ class: text-center
 ---
 layout: cover
 class: text-center
-background: /assets/imgs/testing-bg.webp
+background: /imgs/testing-bg.webp
 ---
 
 # Testing
 
 ---
 layout: image-right
-image: /assets/imgs/first-principies.jpg
+image: /imgs/first-principies.jpg
 ---
 
 # Principios FIRST testing unitario
@@ -302,7 +302,7 @@ Uno de los puntos a favor de pruebas automatizadas es que podemos ejecutarlas si
 Todo esto podría pasar mientras nosotros estamos realizando otra tarea, sin preocuparos de dicha ejecución.
 
 <div class="grid place-content-center">
-  <img src="/assets/imgs/test-pr.png" />
+  <img src="/imgs/test-pr.png" />
 </div>
 
 ---
@@ -332,17 +332,17 @@ class: text-center
 
   Testing-library suite de paquetes para el testing UI centrado en el usuario
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="/assets/imgs/vitests.png">
+  	<img border="rounded" class="h-48" src="/imgs/vitests.png">
   </div>
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="/assets/imgs/testing-lib.jpg">
+  	<img border="rounded" class="h-48" src="/imgs/testing-lib.jpg">
   </div>
   </div>
 
 
 ---
 layout: image-right
-image: /assets/imgs/vitest-logo.png
+image: /imgs/vitest-logo.png
 ---
 
 # Vitest
@@ -359,7 +359,7 @@ image: /assets/imgs/vitest-logo.png
 
 ---
 layout: image-right
-image: /assets/imgs/testing-lib.svg
+image: /imgs/testing-lib.svg
 ---
 
 # Testing-library
@@ -386,7 +386,7 @@ class: text-center
 
 ---
 layout: image-right
-image: /assets/imgs/msw.jpg
+image: /imgs/msw.jpg
 ---
 
 # Mock Service Worker
@@ -398,7 +398,7 @@ Esto significa que no hay solicitudes de resguardos de clientes y una resilienci
 ---
 
 <div>
-	<img src="/assets/imgs/msw-flow.png" class="h-full bg-white" />
+	<img src="/imgs/msw-flow.png" class="h-full bg-white" />
 </div>
 
 ---
@@ -515,7 +515,7 @@ class: text-center
 ---
 layout: cover
 class: text-center
-background: /assets/imgs/mother-object.webp
+background: /imgs/mother-object.webp
 ---
 
 # Patrón Mother Object
@@ -527,7 +527,7 @@ background: /assets/imgs/mother-object.webp
 > An object mother is a kind of class used in testing to help create example objects that you use for testing.
 >
 > -- <cite>Martin Fowler</cite> [24 Octubre 2006](https://martinfowler.com/bliki/ObjectMother.html) 
-src="/assets/
+src="/
 ## Herramientas
   <div grid="~ cols-2 gap-2  content-center" m="-t-2">  
 
@@ -535,10 +535,10 @@ src="/assets/
 
   [Faker](https://www.npmjs.com/package/faker/v/2.1.3)
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="/assets/imgs/faker-js.svg" alt="faker-js" />
+  	<img border="rounded" class="h-48" src="/imgs/faker-js.svg" alt="faker-js" />
   </div>
   <div class="grid place-content-center">
-  	<img border="rounded" class="h-48" src="/assets/imgs/faker.png" alt="faker">
+  	<img border="rounded" class="h-48" src="/imgs/faker.png" alt="faker">
   </div>
   </div>
 
