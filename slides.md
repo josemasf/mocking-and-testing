@@ -366,7 +366,6 @@ class: text-center
 layout: image-right
 image: /imgs/vitest-logo.png
 ---
-
 # Vitest
 
 - Misma configuración para test, dev y producción
@@ -377,6 +376,40 @@ image: /imgs/vitest-logo.png
 - Muy rápido
 
 > Entorno UI muy potente
+
+---
+
+# Flag que más uso en cli
+
+
+```
+--ui
+```
+Abre el entorno visual donde podemos editar tests, ver errores de consola o log que tengamos.
+
+```
+--environment jsdom
+```
+Indica que debe emular el DOM. Por defecto corre sobre node a secas.
+
+```
+--mode XXX
+```
+Indicamos el modo en el que queremos usar los test. DEV, PROD, PERSONALIZADO, ...
+
+```
+run
+```
+Sin guiones, lanzará los tests sin el modo watch. Una vez que cabe el script se para.
+
+---
+
+# En los tests
+
+- `describe` nos permite envolver test relacionados
+- `it` es un alias para la palabra test, simplifica lectura de enunciado
+- `expect` lo usamos para evaluar algo
+- `beforeAll` - `afterAll` - `beforeEach` - `afterEach` ejecutar algo antes o depués de los test. Limpiar mocks
 
 
 ---
@@ -398,6 +431,12 @@ Debemos evitar:
 - Métodos de ciclo de vida de un componente
 - Componentes secundarios
 
+---
+
+# Comandos más usados por mi
+
+- `describe` nos permite envolver test relacionados
+- `it` es un alias para la palabra test, simplifica lectura de enunciado
 
 ---
 layout: center
@@ -471,6 +510,17 @@ const handlers = [
 ]
 
 ```
+
+---
+
+<div grid="~ cols-2 gap-4">
+  <div>
+    Futura versión con breaking changes en response.
+  </div>
+ <div>     
+  <Tweet id="1592826838073880576" scale="0.85"  />
+  </div>
+</div>
 
 ---
 
