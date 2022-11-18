@@ -480,7 +480,6 @@ src/mocks/handlers.js
 
 # Handlers
 
-Contenido
 
 ``` ts
 const handlers = [
