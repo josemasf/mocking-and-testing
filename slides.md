@@ -402,6 +402,11 @@ run
 ```
 Sin guiones, lanzará los tests sin el modo watch. Una vez que cabe el script se para.
 
+```
+--coverage
+```
+Analiza cuanto cubren nuestros tests sobre el código.
+
 ---
 
 # En los tests
