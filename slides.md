@@ -437,13 +437,6 @@ Debemos evitar:
 - Componentes secundarios
 
 ---
-
-# Comandos más usados por mi
-
-- `describe` nos permite envolver test relacionados
-- `it` es un alias para la palabra test, simplifica lectura de enunciado
-
----
 layout: center
 class: text-center
 ---
@@ -463,8 +456,8 @@ Esto significa que no hay solicitudes de resguardos de clientes y una resilienci
 
 ---
 
-<div>
-	<img src="/imgs/msw-flow.png" class="h-full bg-white" />
+<div class="h-full mb-3" >
+	<img src="/imgs/msw-flow.png" class="scale-75 bg-white" />
 </div>
 
 ---
